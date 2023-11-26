@@ -11,7 +11,7 @@ import { Lista } from './lista';
 export class Pregunta3Component {
 
   lista: Lista[] = []
-  displayedColumns: string[] = ["Id", "Nombre"]
+  displayedColumns: string[] = ["Id", "Nombre", "Tipo", "Dimension"]
   filteredLocations: Lista[] = [];
 
   constructor(private apirestservice : ApirestService,

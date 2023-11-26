@@ -1,4 +1,6 @@
 export interface Lista {
     id: number,
-    nombre: string
+    name: string,
+    type: string,
+    dimension: string
 }
