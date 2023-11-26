@@ -1,0 +1,10 @@
+<div>
+    <label>Monto del préstamo:</label>
+    <input type="number" [(ngModel)]="montoPrestamo" />
+  
+    <button (click)="calcularCuotas()">Calcular Cuotas</button>
+  
+    <p>Cantidad de cuotas: {{ cuotas }}</p>
+    <p>Monto de cada cuota: ${{ montoCuota }}</p>
+  </div>
+  

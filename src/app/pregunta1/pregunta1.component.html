@@ -1,0 +1,11 @@
+<div>
+    <label>Cantidad:</label>
+    <input type="number" [(ngModel)]="cantidad" />
+  
+    <label>Precio:</label>
+    <input type="number" [(ngModel)]="precio" />
+  
+    <button (click)="calcularDescuento()">Calcular Descuento</button>
+  
+    <p>Total a pagar: ${{ total }}</p>
+  </div>  
