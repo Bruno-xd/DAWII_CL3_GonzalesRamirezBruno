@@ -31,12 +31,12 @@ import { MaterialModule } from './angular-material/material/material.module';
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent,
         children: [
-          {path: 'home', component: HomeComponent},
           {path: 'uno', component: Pregunta1Component},
           {path: 'dos', component: Pregunta2Component},
           {path: 'tres', component: Pregunta3Component}
         ]      
       },
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
     ])
   ],
   providers: [],

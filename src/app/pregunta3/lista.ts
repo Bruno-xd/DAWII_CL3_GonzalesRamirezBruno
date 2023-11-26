@@ -1,4 +1,4 @@
 export interface Lista {
-    id: string,
+    id: number,
     nombre: string
 }

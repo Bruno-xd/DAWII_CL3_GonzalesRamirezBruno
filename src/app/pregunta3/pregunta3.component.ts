@@ -10,8 +10,9 @@ import { Lista } from './lista';
 })
 export class Pregunta3Component {
 
-  cursos: Lista[] = []
+  lista: Lista[] = []
   displayedColumns: string[] = ["Id", "Nombre"]
+  filteredLocations: Lista[] = [];
 
   constructor(private apirestservice : ApirestService,
     private snackBar: MatSnackBar){
@@ -22,12 +23,22 @@ export class Pregunta3Component {
     this.apirestservice.listar()
       .subscribe(
         (data) => {
-          this.cursos = data
+          this.lista = data
+          this.filteredLocations = this.filtrarporId(this.lista);
         },
         (error) => {
           this.snackBar.open('Error al consumir API Rest', 'OK', {duration: 50000})
         }        
       )
   }
+
+ // private filterLocationsById(locations: Location[]): Location[] {
+ //   return locations.filter(location => location.id % 2 === 0);
+ // }
+
+    private filtrarporId(lista: Lista[]): Lista[] {
+      return lista.filter(lista => lista.id % 2 === 0);
+    }
+
 
 }

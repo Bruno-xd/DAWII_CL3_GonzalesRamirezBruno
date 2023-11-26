@@ -1,11 +1,11 @@
-<table mat-table [dataSource]="cursos" class="mat-elevation-z8">
+<table mat-table [dataSource]="lista" class="mat-elevation-z8">
     <ng-container matColumnDef="Id">
       <th mat-header-cell *matHeaderCellDef> ID </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>  
     <ng-container matColumnDef="Nombre">
-      <th mat-header-cell *matHeaderCellDef> Curso </th>
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
       <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
     </ng-container>  
 </table>
-<h1>Respuesta 3</h1>
+<router-outlet></router-outlet>
